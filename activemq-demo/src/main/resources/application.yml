@@ -1,0 +1,21 @@
+
+
+#ActiveMQ配置
+spring:
+  activemq:
+    broker-url: tcp://120.92.151.44:61616 #ActiveMQ服务器IP
+    user: admin #ActiveMQ连接用户名
+    password: admin #ActiveMQ连接密码
+  jms:
+    #指定连接队列还是主题
+    pub-sub-domain: false # false = Queue |  true = Topic
+  profiles:
+    active: dev
+
+#定义服务上的队列名
+myQueueName: springboot-activemq-queue
+
+person:
+  name: 小毛
+  gender: 男
+  age: 18
